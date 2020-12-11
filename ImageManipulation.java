@@ -1,8 +1,7 @@
 import java.awt.image.BufferedImage;
 import java.awt.*;
 
-public class Processor  
-{
+public class ImageManipulation {
     /**
      * Reflects the image in the x axis
      * @param image Input image
