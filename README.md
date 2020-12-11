@@ -1,3 +1,3 @@
-# image-manipulation-stuff
+# Image Manipulation Functions
 
 Java image manipulation functions.
