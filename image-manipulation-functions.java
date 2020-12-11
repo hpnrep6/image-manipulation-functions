@@ -455,34 +455,6 @@ public class Processor
     }
 
     /**
-     * Adds sepia to the image
-     * Based off of https://www.geeksforgeeks.org/image-procesing-java-set-6-colored-image-sepia-image-conversion/
-     * @param image Input image
-     * @param amount Amount of sepia to add
-     * @return Image with sepia added
-     */
-    public static BufferedImage sepia(BufferedImage image,  int amount) {
-        BufferedImage sepia = createBlankClone(image);
-
-        for(int y = 0; y < image.getHeight(); y++) {
-            for(int x = 0; x < image.getWidth(); x++) {
-                Color current = new Color(image.getRGB(x, y));
-                float r = current.getRed() / 255f;
-                float g = current.getGreen() / 255f;
-                float b = current.getGreen() / 255f;
-                // Apply sepia algorithm
-                sepia.setRGB(x, y, new Color(
-                        (int)(clampRGB((float) (0.393*r + 0.769*g + 0.189*b)) * 255),
-                        (int)(clampRGB((float) (0.349*r + 0.686*g + 0.168*b)) * 255),
-                        (int)(clampRGB((float) (0.272*r + 0.534*g + 0.131*b)) * 255)
-                ).getRGB());
-            }
-        }
-
-        return mixAlpha(sepia, image, amount);
-    }
-
-    /**
      * Saturates the image
      * @param image Input image
      * @param amount Amount to saturate by
