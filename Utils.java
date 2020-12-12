@@ -7,7 +7,7 @@ public class Utils {
     /**
      * From https://stackoverflow.com/questions/3514158/how-do-you-clone-a-bufferedimage
      *
-     * @params bi BufferedImage object to copy
+     * @param bi BufferedImage object to copy
      *
      * @return Copied BufferedImage
      */
